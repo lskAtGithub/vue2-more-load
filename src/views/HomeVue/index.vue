@@ -54,13 +54,8 @@ export default {
     lazyRender(arr, set) {
       const _this = this
       _this.level++
-      arr.map((item) => {
-        if (set[item.id]) {
-          item.children = set[item.id]
-        } else {
-          item.children = []
-        }
-      })
+      console.log(arr)
+      console.log(set)
       this.$nextTick(() => {
         // 如果还有下一级那么就继续拿到该层级执行
         if (this.level < this.maxLevel) {
